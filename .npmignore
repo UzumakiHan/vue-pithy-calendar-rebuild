@@ -13,3 +13,5 @@ rollup.vue3.config.js
 tsconfig.json
 
 .gitignore
+
+.versionrc
