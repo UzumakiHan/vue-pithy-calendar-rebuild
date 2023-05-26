@@ -1,0 +1,89 @@
+{
+  "name": "vue-pithy-calendar",
+  "version": "1.0.0",
+  "description": "vue日历组件",
+  "main": "dist/vue3/cjs/index.js",
+  "module": "dist/vue3/esm/index.js",
+  "type": "module",
+  "types": "./typings/typing.d.ts",
+  "authors":"UzumakiHan",
+  "exports": {
+    ".": {
+      "require": "./dist/vue3/cjs/index.js",
+      "import": "./dist/vue3/esm/index.js",
+      "types": "./typings/typing.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:UzumakiHan/vue-pithy-calendar-rebuild.git"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.{ts,vue,jsx,tsx} --fix",
+    "stylelint": "stylelint \"./**/*.{vue,scss}\" --fix",
+    "prettier": "prettier ./src/*/**/*.{css,less} --write",
+    "prebuild": "npm run lint && npm run stylelint && npm run prettier",
+    "buildvue2": "rollup -c rollup.vue2.config.js",
+    "buildvue3": "rollup -c rollup.vue3.config.js",
+    "buildall": "rimraf dist && npm run buildvue2 && npm run buildvue3"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "typings"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.5",
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@vue/compiler-sfc": "^3.3.4",
+    "autoprefixer": "^10.4.14",
+    "core-js": "^3.30.2",
+    "eslint": "^8.41.0",
+    "eslint-config-hfex": "^1.0.2",
+    "hfex-prettier-config": "^1.0.0",
+    "hfex-stylelint-config": "^1.0.1",
+    "prettier": "^2.8.8",
+    "rollup": "^3.23.0",
+    "rollup-plugin-asset-url": "^0.1.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-smart-asset": "^2.1.2",
+    "rollup-plugin-vue2": "npm:rollup-plugin-vue@^5.1.9",
+    "rollup-plugin-vue3": "npm:rollup-plugin-vue@^6.0.0",
+    "sass": "^1.62.1",
+    "stylelint": "^14.16.1",
+    "typescript": "^5.0.4",
+    "vue-template-compiler": "^2.7.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "hfex"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "hfex-stylelint-config/src/rules/base"
+    ]
+  },
+  "prettier": "hfex-prettier-config",
+  "browserslist": [
+    "> 1%", 
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+
+}
