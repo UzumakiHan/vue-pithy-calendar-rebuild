@@ -16,10 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
+        npm install
         git config --global user.name 'UzumakiHan'
         git config --global user.email '1750263786@qq.com'
-        npm run buildall
         npm run release
+        npm run buildall
         git push --follow-tags origin master
 
   publish:
