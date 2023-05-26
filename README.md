@@ -53,11 +53,11 @@ npm i vue-pithy-calendar@latest -D
 //vue2
 <template>
     <div>
-        <vue-calendar @chooseDay="getChooseDay"/>
+        <vue-pithy-calendar @chooseDay="getChooseDay"/>
     </div>
 </template>
 <script>
-import VueCalendar from 'vue-calendar/dist/vue2/esm'
+import VuePithyCalendar from 'vue-pithy-calendar/dist/vue2/esm'
 export default({
     components:{VueCalendar},
     methods:{
