@@ -1,6 +1,6 @@
 {
   "name": "vue-pithy-calendar",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "vue日历组件",
   "main": "dist/vue3/cjs/index.js",
   "module": "dist/vue3/esm/index.js",
