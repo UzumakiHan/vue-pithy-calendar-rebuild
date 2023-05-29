@@ -15,16 +15,16 @@ jobs:
       # install
       - name: Install dependencies
         run: npm install
-      # Release Tag
-      - name: Release Tag
-        run: |
-           git config --global user.email "1750263786@qq.com"
-           git config --global user.name "UzumakiHan"
-           npm run release
-           git push --follow-tags origin master
+#       # Release Tag
+#       - name: Release Tag
+#         run: |
+#            git config --global user.email "1750263786@qq.com"
+#            git config --global user.name "UzumakiHan"
+#            npm run release
+#            git push --follow-tags origin master
        # 打包
       - name: Build Packages
-        run: npm run buildall
+        run: rimraf dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #   publish:
