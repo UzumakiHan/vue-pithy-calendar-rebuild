@@ -20,35 +20,19 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      # git config
+      - name: Git Config
+        run: |
+           git config --global user.email "1750263786@qq.com"
+           git config --global user.name "UzumakiHan"
       # install
       - name: Install dependencies
         run: |
            npm install
-           git config --global user.email "1750263786@qq.com"
-           git config --global user.name "UzumakiHan"
-#       # Release Tag
-#       - name: Release Tag
-#         run: |
-#            npm run release
-#            git push --follow-tags origin master
-      # 打包
-      - name: Build Packages
+      # Release Tag
+      - name: Release Tag
         run: |
-           npm run buildall
-           git add .
-           git commit -m 'build: build dist'
-           git push origin master
+           npm run release
+           git push --follow-tags origin master
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#   publish:
-#     needs: release
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: 16
-#           registry-url: https://registry.npmjs.org/
-#       - run: npm publish
-#         env:
-#           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
