@@ -29,13 +29,13 @@ jobs:
       - name: Install dependencies
         run: |
            npm install
-#       # Release Tag
-#       - name: Release Tag
-#         run: |
-#            npm run release
-#            git push --follow-tags origin master
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      # Release Tag
+      - name: Release Tag
+        run: |
+           npm run release
+           git push --follow-tags origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   publish:
     needs: release
     runs-on: ubuntu-latest
