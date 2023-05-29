@@ -46,7 +46,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Create a release
-      uses: actions/create-release@v1
+      uses: action-pack/github-release@v2
       env:
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       with:
