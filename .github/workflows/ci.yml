@@ -37,7 +37,7 @@ jobs:
            npm run buildall
            git add .
            git commit -m 'build: build dist'
-           git push
+           git push origin master
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #   publish:
