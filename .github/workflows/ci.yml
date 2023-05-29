@@ -3,13 +3,11 @@ name: Package CI
 
 # 触发时机，在 main 分支 push 操作触发
 on:
-  release:
-    types: [created]
-    
-  pull_request:
+  push:
     branches:
       - master
-  push:
+
+  pull_request:
     branches:
       - master
 
