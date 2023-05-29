@@ -29,6 +29,7 @@ jobs:
       # 打包
       - name: Build Packages
         run: |
+           git pull
            npm run buildall
            git add .
            git commit -m 'build: build dist'
