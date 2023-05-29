@@ -3,8 +3,8 @@ name: Package CI
 
 # 触发时机，在 main 分支 push 操作触发
 on:
- push:
-    branches: [master]
+  release:
+    types: [created]
 
 # 任务
 jobs:
