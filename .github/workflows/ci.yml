@@ -26,18 +26,16 @@ jobs:
       - name: Install dependencies
         run: npm install
       # Release Tag
-      - name: Release Tag
-        run: |
-           git config --global user.email "1750263786@qq.com"
-           git config --global user.name "UzumakiHan"
-           npm run release
+#       - name: Release Tag
+#         run: |
+#            git config --global user.email "1750263786@qq.com"
+#            git config --global user.name "UzumakiHan"
+#            npm run release
+#            git push --follow-tags origin master
       # 打包
       - name: Build Packages
         run: |
-           npm run buildvue2
-           npm run buildvue3
-           git push --follow-tags origin master
-      
+           npm run buildall
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #   publish:
