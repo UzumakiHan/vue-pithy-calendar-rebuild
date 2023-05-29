@@ -27,7 +27,7 @@ jobs:
 #            git push --follow-tags origin master
        # 打包
       - name: Build Packages
-        run: rimraf dist
+        run: npm run buildall
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #   publish:
