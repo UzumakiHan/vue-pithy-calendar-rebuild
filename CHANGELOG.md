@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.5 (2023-05-29)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修改publish脚本 ([d581b99](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/d581b99a2f994653fe4c2346c9ef9f0d32312a22))
+
 ### 1.0.4 (2023-05-29)
 
 
