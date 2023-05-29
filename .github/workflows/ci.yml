@@ -4,7 +4,7 @@ name: Package CI
 # 触发时机，在 main 分支 push 操作触发
 on:
   release:
-    types: [created]
+    types: [published]
 
 # 任务
 jobs:
@@ -18,20 +18,22 @@ jobs:
       # install
       - name: Install dependencies
         run: npm install
-#       # Release Tag
-#       - name: Release Tag
-#         run: |
-#            git config --global user.email "1750263786@qq.com"
-#            git config --global user.name "UzumakiHan"
-#            npm run release
-#            git push --follow-tags origin master
-       # 打包
+      # Release Tag
+      - name: Release Tag
+        run: |
+           git config --global user.email "1750263786@qq.com"
+           git config --global user.name "UzumakiHan"
+           npm run release
+           git push --follow-tags origin master
+      # 打包
       - name: Build Packages
         run: |
            npm run buildvue2
            npm run buildvue3
+           git push
+      
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #   publish:
 #     needs: release
 #     runs-on: ubuntu-latest
