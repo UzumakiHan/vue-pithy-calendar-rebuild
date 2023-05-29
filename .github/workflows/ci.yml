@@ -1,7 +1,7 @@
 # This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
 # For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
 
-name: Publish Package to npmjs
+name: Package CI
 
 on:
   push:
@@ -14,14 +14,20 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - run: |
-        npm install
-        git config --global user.name 'UzumakiHan'
-        git config --global user.email '1750263786@qq.com'
-        npm run buildall
+      -uses: actions/checkout@v3
+      -name: Install dependencies
+       run: npm install
+      
+      -name: Build Packages
+       run: npm run buildall
+
+      -name: Release Tag
+       run: |
         npm run release
         git push --follow-tags origin master
+
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish:
     needs: release

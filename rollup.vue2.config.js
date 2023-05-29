@@ -4,17 +4,10 @@ import vue2 from 'rollup-plugin-vue2';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
-
 import json from '@rollup/plugin-json';
 import postcss from 'rollup-plugin-postcss'
 import typescript from '@rollup/plugin-typescript';
 import autoprefixer from 'autoprefixer'
-
-import path from 'path'
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-
-const pkg = require(path.resolve(`package.json`))
 
 export default [
     {
@@ -23,7 +16,7 @@ export default [
             {
                 file:'dist/vue2/cjs/index.js',
                 format: "cjs",
-                // sourcemap: true,
+                sourcemap: false,
                 globals: {
                     vue: "Vue"
                 }
@@ -31,7 +24,7 @@ export default [
             {
                 file: 'dist/vue2/esm/index.js',
                 format: "es",
-                // sourcemap: true,
+                sourcemap: false,
                 globals: {
                     vue: "Vue"
                 }
