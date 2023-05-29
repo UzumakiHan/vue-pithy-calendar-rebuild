@@ -27,7 +27,9 @@ jobs:
 #            git push --follow-tags origin master
        # 打包
       - name: Build Packages
-        run: npm run buildall
+        run: |
+           npm run buildvue2
+           npm run buildvue3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #   publish:
