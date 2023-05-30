@@ -28,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: |
            npm install
-      Release Tag
+#       Release Tag
       - name: Release Tag
         run: |
            npm run release
