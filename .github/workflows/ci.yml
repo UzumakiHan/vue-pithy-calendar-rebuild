@@ -17,7 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - uses: yyx990803/release-tag@master
         with:
           node-version: 16
       # git config
@@ -33,7 +32,7 @@ jobs:
       - name: Release Tag
         run: |
            npm run release
-           git push origin v${{ github.ref }}
+           git push origin v${{ follow-tags }}
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   
