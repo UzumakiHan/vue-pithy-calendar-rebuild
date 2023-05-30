@@ -17,8 +17,8 @@ jobs:
         id: release_tag
         uses: yyx990803/release-tag@master
         env:
-          GITHUB_TOKEN: ${{ secrets.OPER_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
           body: |
-            Please refer to [CHANGELOG.md](https://github.com/anncwb/vue-vben-admin/blob/main/CHANGELOG.md) for details.
+            success publish tag
