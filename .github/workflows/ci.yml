@@ -32,6 +32,7 @@ jobs:
       - name: Release Tag
         run: |
            npm run release
+           npm run follow-tags
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   
