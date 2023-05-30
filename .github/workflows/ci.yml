@@ -32,7 +32,7 @@ jobs:
       - name: Release Tag
         run: |
            npm run release
-           git push --follow-tags origin master
+           git tag ${{ github.event.release.tag_name }}
            git push origin ${{ github.event.release.tag_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
