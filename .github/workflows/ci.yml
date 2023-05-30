@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - master
-    tags:
-      - 'v*'
-
   pull_request:
     branches:
       - master
@@ -32,10 +29,10 @@ jobs:
         run: |
            npm install
       # Release Tag
-      - name: Release Tag
-        run: |
-           npm run release
-           git push --follow-tags origin master
+#       - name: Release Tag
+#         run: |
+#            npm run release
+#            git push --follow-tags origin master
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   
@@ -55,18 +52,18 @@ jobs:
 #         draft: false
 #         prerelease: false
 
-  publish:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - uses: JS-DevTools/npm-publish@v2
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+#   publish:
+#     needs: release
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - uses: actions/setup-node@v3
+#         with:
+#           node-version: 16
+#           registry-url: https://registry.npmjs.org/
+#       - run: npm ci
+#       - uses: JS-DevTools/npm-publish@v2
+#         with:
+#           token: ${{ secrets.NPM_TOKEN }}
       
         
