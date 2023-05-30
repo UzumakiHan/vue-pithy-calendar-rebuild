@@ -28,12 +28,12 @@ jobs:
       - name: Install dependencies
         run: |
            npm install
-      # Release Tag
-      # - name: Release Tag
-      #   run: |
-      #      npm run release
-      #      git push --follow-tags origin master
-      #      git push –-tags
+      Release Tag
+      - name: Release Tag
+        run: |
+           npm run release
+           git push --follow-tags origin master
+           git push –-tags
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
   
