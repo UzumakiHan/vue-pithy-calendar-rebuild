@@ -19,7 +19,6 @@
     "url": "git@github.com:UzumakiHan/vue-pithy-calendar-rebuild.git"
   },
   "scripts": {
-    "release": "standard-version",
     "lint": "eslint src/**/*.{ts,vue,jsx,tsx} --fix",
     "stylelint": "stylelint \"./**/*.{vue,scss}\" --fix",
     "prettier": "prettier ./src/*/**/*.{css,less} --write",
@@ -66,7 +65,6 @@
     "rollup-plugin-vue2": "npm:rollup-plugin-vue@^5.1.9",
     "rollup-plugin-vue3": "npm:rollup-plugin-vue@^6.0.0",
     "sass": "^1.62.1",
-    "standard-version": "^9.5.0",
     "stylelint": "^14.16.1",
     "typescript": "^5.0.4",
     "vue-template-compiler": "^2.7.14"
