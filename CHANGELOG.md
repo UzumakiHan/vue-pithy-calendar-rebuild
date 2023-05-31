@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/compare/v1.10.18...v1.11.0) (2023-05-31)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* build ([3a00da1](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/3a00da1c4e49393a73fd7bf998baa2f9222be149))
+* build ([6ffa51e](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/6ffa51e03e264ab692a4cdc42509f493ab1d9fd7))
+
+
+### 🎫 Chores | 其他更新
+
+* **release:** 1.0.18 ([5f43d16](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/5f43d16232e0205f42239094970c9577b0ae5a0c))
+* **release:** 1.0.19 ([8e301e3](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/8e301e3db2d388ec08a79fbc73ba22915d3b5086))
+* **release:** 1.0.20 ([3a9daf9](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/3a9daf9961ea7ae18b47f98e1f7e318cddd6fad3))
+* **release:** 1.0.21 ([6a8be7c](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/6a8be7c793910baaf9bcae06286eab17363ea369))
+
+
+### ✨ Features | 新功能
+
+* 重新整理GitHub action构建脚本 ([18f007b](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/18f007b788c5eb845408b5c6ffa2a0c1dc828fd5))
+
 ### 1.0.21 (2023-05-30)
 
 ### 1.0.20 (2023-05-30)
