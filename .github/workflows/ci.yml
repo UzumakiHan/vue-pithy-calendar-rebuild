@@ -59,8 +59,8 @@ jobs:
       - name: Upload build dist
         uses: actions/upload-artifact@v3
         with:
-        name: my-dist # 自定义名称
-        path: dist/ # 构建产出物的路径
+          name: my-dist # 自定义名称
+          path: dist/ # 构建产出物的路径
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
