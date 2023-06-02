@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.1](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/compare/v1.11.0...v1.11.1) (2023-06-02)
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* delete dist ([08f99b1](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/08f99b19e30f82ee96879537c06a708306af3737))
+* pnpm install ([0a5ae9c](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/0a5ae9ce05568014def7a434b62a9f64e3255b4d))
+* 构建产物上传 ([5ef0383](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/5ef038309f49a2bf5105ece8378a46d33166f916))
+* 构建产物上传 ([e487428](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/e4874283a017525c6591c2af4461884659d73d41))
+* 构建产物下载 ([adbe8df](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/adbe8df202e355899854a3fd18e272900ca037de))
+* 构建产物下载 ([b2aa142](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/commit/b2aa14254278ce9eb09500a103df39c5b6000920))
+
 ## [1.11.0](https://github.com/UzumakiHan/vue-pithy-calendar-rebuild/compare/v1.10.18...v1.11.0) (2023-05-31)
 
 
