@@ -55,14 +55,14 @@ jobs:
           git add .
           git commit -m "build: Update build dist - $(git rev-parse --short HEAD)"
 
-      - name: git pull
+      - name: Git Pull
         run: git pull
       
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          branch: origin HEAD
+          branch: 'origin HEAD'
                  
       - uses: google-github-actions/release-please-action@v3
         id: release
