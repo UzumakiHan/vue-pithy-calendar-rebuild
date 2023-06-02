@@ -69,7 +69,7 @@ jobs:
           path: my-dist.tgz # 构建产出物的路径
       
       - name: Extract Artifact
-        run: tar xvf my-artifact.tgz --strip-components=1
+        run: tar xvf my-dist.tgz --strip-components=1
 
       - name: Commit Changes
         run: |
