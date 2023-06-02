@@ -76,7 +76,7 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git config --local user.email 1750263786@qq.com"
+          git config --local user.email "1750263786@qq.com"
           git config --local user.name "UzumakiHan"
           git commit -m "build: Update build dist" -a || true
       
