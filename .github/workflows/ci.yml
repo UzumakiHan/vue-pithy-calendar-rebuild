@@ -56,7 +56,7 @@ jobs:
           git commit -m "build: Update build dist" -a || true
 
       - name: Git pull
-        run: git pull
+        run: git pull --rebase
       
       - name: Push Changes
         uses: ad-m/github-push-action@master
