@@ -56,23 +56,23 @@ jobs:
         
       - name: Build
         run: npm run buildAll
-      - name: Upload build dist
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-dist # 自定义名称
-          path: ${{ github.workspace }}/dist # 构建产出物的路径
+      # - name: Upload build dist
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: my-dist # 自定义名称
+      #     path: ${{ github.workspace }}/dist # 构建产出物的路径
 
-      - name: Download build dist
-        uses: actions/download-artifact@v3
-        with:
-          name: my-dist # 自定义名称
-          path: my-dist.tgz
+      # - name: Download build dist
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: my-dist # 自定义名称
+      #     path: my-dist.tgz
 
-      - name: Display structure of downloaded files
-        run: ls -R
+      # - name: Display structure of downloaded files
+      #   run: ls -R
       
-      - name: Extract Artifact
-        run: tar xvf ${{ github.workspace }}/my-dist.tgz -C ${{ github.workspace }}/dist
+      # - name: Extract Artifact
+      #   run: tar xvf ${{ github.workspace }}/my-dist.tgz -C ${{ github.workspace }}/dist
 
       - name: Commit Changes
         run: |
