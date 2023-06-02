@@ -25,7 +25,7 @@
     "prebuild": "npm run lint && npm run stylelint && npm run prettier",
     "buildvue2": "rollup -c rollup.vue2.config.js",
     "buildvue3": "rollup -c rollup.vue3.config.js",
-    "buildall": "rimraf dist && npm run buildvue2 && npm run buildvue3"
+    "build": "rimraf dist && npm run buildvue2 && npm run buildvue3"
   },
   "files": [
     "dist",
