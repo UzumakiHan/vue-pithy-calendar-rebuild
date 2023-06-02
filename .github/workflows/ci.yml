@@ -50,19 +50,20 @@ jobs:
     
       - name: Commit Changes
         run: |
+          git pull
           git config --local user.email "1750263786@qq.com"
           git config --local user.name "UzumakiHan"
           git add .
           git commit -m "build: Update build dist" -a || true
 
-      - name: Git pull
-        run: git pull
+      # - name: Git pull
+      #   run: git pull
       
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          branch: 'origin HEAD'
+          branch: ${{ github.head_ref }}
                  
       - uses: google-github-actions/release-please-action@v3
         id: release
