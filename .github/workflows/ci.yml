@@ -54,6 +54,9 @@ jobs:
           git config --local user.name "UzumakiHan"
           git add .
           git commit -m "build: Update build dist" -a || true
+
+      - name: git pull
+        run: git pull
       
       - name: Push Changes
         uses: ad-m/github-push-action@master
