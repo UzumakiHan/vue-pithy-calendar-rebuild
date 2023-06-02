@@ -66,7 +66,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: my-dist # 自定义名称
-          path: ${{ github.workspace }}/dist
+          path: my-dist.tgz
 
       - name: Display structure of downloaded files
         run: ls -R
