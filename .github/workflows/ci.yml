@@ -53,9 +53,9 @@ jobs:
           git config --local user.email "1750263786@qq.com"
           git config --local user.name "UzumakiHan"
           git add .
-          git commit -m "build: Update build dist - $(git rev-parse --short HEAD)"
+          git commit -m "build: Update build dist" -a || true
 
-      - name: Git Pull
+      - name: Git pull
         run: git pull
       
       - name: Push Changes
