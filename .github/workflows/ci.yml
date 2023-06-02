@@ -60,13 +60,16 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-dist # 自定义名称
-          # path: my-dist.tgz # 构建产出物的路径
+          path: ${{ github.workspace }} # 构建产出物的路径
+
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Download build dist
         uses: actions/download-artifact@v3
         with:
           name: my-dist # 自定义名称
-          # path:  # 构建产出物的路径
+          # path: ${{ github.workspace }}
       
       - name: Extract Artifact
         run: tar xvf my-dist.tgz --strip-components=1
