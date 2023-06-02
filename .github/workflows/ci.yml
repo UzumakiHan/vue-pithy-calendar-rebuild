@@ -72,7 +72,7 @@ jobs:
         run: ls -R
       
       - name: Extract Artifact
-        run: tar xvf my-dist.tgz --strip-components=1
+        run: tar xvf my-dist.tgz -C ${{ github.workspace }}/dist
 
       - name: Commit Changes
         run: |
