@@ -59,7 +59,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: origin HEAD
                  
       - uses: google-github-actions/release-please-action@v3
         id: release
