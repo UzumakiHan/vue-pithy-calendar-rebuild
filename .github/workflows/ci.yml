@@ -66,6 +66,8 @@ jobs:
         with:
           name: my-dist # 自定义名称
           path: dist/ # 构建产出物的路径
+      - name: Display structure of downloaded files
+        run: ls -R
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
