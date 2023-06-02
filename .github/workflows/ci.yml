@@ -69,7 +69,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: my-dist # 自定义名称
-          # path: ${{ github.workspace }}
+          path: ${{ github.workspace }}/dist
       
       - name: Extract Artifact
         run: tar xvf my-dist.tgz --strip-components=1
