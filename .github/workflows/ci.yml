@@ -50,12 +50,11 @@ jobs:
                   
       - name: Commit Changes
         run: |
+          git pull
           git config --local user.email "1750263786@qq.com"
           git config --local user.name "UzumakiHan"
-          git tag -d $GITHUB_REF_NAME
-          git tag $GITHUB_REF_NAME
           git add .
-          git commit -m "build: Update build dist" -a || true
+          git commit -m "build: Update build dist"
 
       # - name: Git pull
       #   run: git pull --rebase
@@ -65,8 +64,6 @@ jobs:
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: ${{ github.head_ref }}
-          force: true
-          tags: true
 
       - uses: google-github-actions/release-please-action@v3
         id: release
