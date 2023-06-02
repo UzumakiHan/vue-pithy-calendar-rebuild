@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: my-dist # 自定义名称
-          path: ${{ github.workspace }} # 构建产出物的路径
+          path: ${{ github.workspace }}/dist # 构建产出物的路径
 
       - name: Display structure of downloaded files
         run: ls -R
