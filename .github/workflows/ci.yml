@@ -45,37 +45,13 @@ jobs:
       - name: Install dependencies
         run: |
            pnpm install
-                 
-      - uses: google-github-actions/release-please-action@v3
-        id: release
-        with:
-          token: ${{ secrets.ACCESS_TOKEN }}
-          release-type: node
-          package-name: release-please-action
-          changelog-types: '[{"type": "chore", "section":"🎫 Chores | 其他更新", "hidden": false},{"type": "revert", "section":"⏪ Reverts | 回退", "hidden": false},{"type": "feat", "section": "✨ Features | 新功能", "hidden": false},{"type": "fix", "section": "🐛 Bug Fixes | Bug 修复", "hidden": false},{"type": "improvement", "section": "Feature Improvements", "hidden": false},{"type": "docs", "section":"📝 Documentation | 文档", "hidden": false},{"type": "style", "section":"💄 Styles | 风格", "hidden": false},{"type": "refactor", "section":"💄 Styles | 风格", "hidden": false},{"type": "perf", "section":"⚡ Performance Improvements | 性能优化", "hidden": false},{"type": "test", "section":"✅ Tests | 测试", "hidden": false},{"type": "build", "section":"👷‍ Build System | 构建", "hidden": false},{"type": "ci", "section":"🔧 Continuous Integration | CI 配置", "hidden":false}]' 
-        
       - name: Build
         run: npm run buildAll
-      # - name: Upload build dist
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: my-dist # 自定义名称
-      #     path: ${{ github.workspace }}/dist # 构建产出物的路径
-
-      # - name: Download build dist
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: my-dist # 自定义名称
-      #     path: my-dist.tgz
-
-      # - name: Display structure of downloaded files
-      #   run: ls -R
-      
-      # - name: Extract Artifact
-      #   run: tar xvf ${{ github.workspace }}/my-dist.tgz -C ${{ github.workspace }}/dist
-
+    
       - name: Commit Changes
         run: |
+          git config --local user.email "1750263786@qq.com"
+          git config --local user.name "UzumakiHan"
           git add .
           git commit -m "build: Update build dist" -a || true
       
@@ -84,7 +60,15 @@ jobs:
         with:
           github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: ${{ github.ref }}
-     
+                 
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          release-type: node
+          package-name: release-please-action
+          changelog-types: '[{"type": "chore", "section":"🎫 Chores | 其他更新", "hidden": false},{"type": "revert", "section":"⏪ Reverts | 回退", "hidden": false},{"type": "feat", "section": "✨ Features | 新功能", "hidden": false},{"type": "fix", "section": "🐛 Bug Fixes | Bug 修复", "hidden": false},{"type": "improvement", "section": "Feature Improvements", "hidden": false},{"type": "docs", "section":"📝 Documentation | 文档", "hidden": false},{"type": "style", "section":"💄 Styles | 风格", "hidden": false},{"type": "refactor", "section":"💄 Styles | 风格", "hidden": false},{"type": "perf", "section":"⚡ Performance Improvements | 性能优化", "hidden": false},{"type": "test", "section":"✅ Tests | 测试", "hidden": false},{"type": "build", "section":"👷‍ Build System | 构建", "hidden": false},{"type": "ci", "section":"🔧 Continuous Integration | CI 配置", "hidden":false}]' 
+           
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       
