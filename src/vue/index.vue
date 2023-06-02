@@ -212,7 +212,6 @@ export default {
             const chooseDate = `${this.year}-${this.month}-${this.day}`;
             this.SameCode(chooseDate);
         },
-        //
         SameCode(chooseDate) {
             this.showDate = this.getYearMonthDay(new Date(chooseDate));
             this.days = this.getShowDays();
