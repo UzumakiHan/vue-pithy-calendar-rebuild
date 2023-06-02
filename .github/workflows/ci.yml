@@ -56,16 +56,16 @@ jobs:
         
       - name: Build
         run: npm run buildAll
-      - name: Upload build dist
-        uses: actions/upload-artifact@v3
-        with:
-          name: my-dist # 自定义名称
-          path: dist/ # 构建产出物的路径
-      - name: Download build dist
-        uses: actions/download-artifact@v3
-        with:
-          name: my-dist # 自定义名称
-          path: dist/ # 构建产出物的路径
+      # - name: Upload build dist
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: my-dist # 自定义名称
+      #     path: dist/ # 构建产出物的路径
+      # - name: Download build dist
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: my-dist # 自定义名称
+      #     path: dist/ # 构建产出物的路径
       - name: Display structure of downloaded files
         run: ls -R
         env:
