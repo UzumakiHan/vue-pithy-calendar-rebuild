@@ -10,14 +10,6 @@
 npm i vue-pithy-calendar@0.1.2 -D
 ```
 
-**引入**
-```js
-//main.js
-import VuePithyCalendar from 'vue-pithy-calendar'
-import 'vue-pithy-calendar/dist/vue-pithy-calendar.css'
-Vue.use(VuePithyCalendar)
-```
-
 **使用**
 ```js
 <template>
@@ -26,8 +18,12 @@ Vue.use(VuePithyCalendar)
   </div>
 </template>
 <script>
+import VuePithyCalendar from 'vue-pithy-calendar'
+import 'vue-pithy-calendar/dist/vue-pithy-calendar.css'
 export default {
   name: 'App',
+    components:{VueCalendar},
+
    methods: {
    getChooseDay(msg){
      console.log(msg);
@@ -58,13 +54,13 @@ npm i vue-pithy-calendar@latest -D
 </template>
 <script>
 import VuePithyCalendar from 'vue-pithy-calendar/dist/vue2/esm'
-export default({
+export default{
     components:{VueCalendar},
     methods:{
       getChooseDay(msg){
       console.log(msg);
     }
-})
+}
 </script>
 
 ```
